@@ -26,17 +26,22 @@ header{
                     width: 45%;
         }
             
-}       
+} 
+
+
 .location{
             -webkit-box-shadow: inset 0px 5px 5px 0px rgba(53, 53, 53, 0.25); 
             box-shadow: inset 0px 5px 5px 0px rgba(53, 53, 53, 0.25); 
-            background-color: rgb(231, 231, 231);
+            background-color: rgb(240, 240, 240);
             width: 100%;
             padding:2vh 0 2vh 0;
                 p{
                     margin-left: 15px;
                 }
         }
+
+
+
 .ad{
     width: 100%;
     padding-top: 4vh;
@@ -68,6 +73,9 @@ header{
             font-size: 17px;
         }
 }
+
+
+
 .how{
     margin: auto;
     width: 90vw;
@@ -101,14 +109,14 @@ header{
                     counter-increment: card;
                     content: counter(card);
                     position: absolute;
-                    height: 8vw;
+                    height: 4vh;
                     font-size: 16px;
                     font-weight: bold;
                     aspect-ratio: 1/1;
                     border-radius: 50%;
                     background-color: #9356DC ;
                     color: white;
-                    transform: translateX(-4vw);
+                    transform: translateX(-2vh);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -118,3 +126,94 @@ header{
                 }
         }
 }   
+
+.restaurant{
+    margin: auto;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    margin-top: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    flex-direction: column;
+    row-gap: 3.5vh;
+    
+        .entete{
+            margin-left: 5vw;
+            font-size: 23px;
+            font-weight: bold;
+            align-self: baseline;
+        }
+        .card{
+            position: relative;
+            width: 90%;
+            border-radius: 15px 15px 15px 15px;
+            overflow: hidden;
+            -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3); 
+            box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3);
+            .new{
+                 position: absolute;
+                 top: 2vh;
+                 right: 2vh;
+                 color: #295a45;
+                 font-weight: bold;
+                 background-color: #99e2d0cc;
+                 padding: 0.3vh 0.8vh;
+                 border-radius: 3px;
+            }
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+            .legend{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1vh 2.5vh 1.5vh 1.5vh;
+                    .col{
+                        width: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 0.7vh;
+                        
+                            p{
+                                width: 100%;
+                            }
+                            .title{
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+                    }
+                    .icon{
+                        margin-right: 3%;
+                        align-self: baseline;
+                        font-size: 35px;
+                    }
+            }
+        }
+}
+
+footer{
+    width: 100%;
+    padding: 3vh 5vw 6.5vh 5vw; 
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    row-gap: 1.4vh;
+    color: white;
+    background-color: rgb(55, 55, 55);
+        img{
+            width: clamp(50px,30%,150px);
+            padding-bottom: 2.5vh;
+        }
+        
+        .row{
+            display: flex;
+            flex-direction: row;
+                .icon{
+                    width: 30px;
+                }
+        }
+  
+
+}

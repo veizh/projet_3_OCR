@@ -1,5 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  counter-reset: card;
+}
+
+header {
+  width: 100%;
+  flex-direction: column;
+}
+header .logo {
+  margin: 2.5vh 0 2.5vh 0;
+  width: 45%;
+}
+
+.location {
+  box-shadow: inset 0px 5px 5px 0px rgba(53, 53, 53, 0.25);
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  padding: 2vh 0 2vh 0;
+}
+.location p {
+  margin-left: 15px;
+}
+
+.ad {
+  width: 100%;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  height: 35vh;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.ad .accroche {
+  text-align: center;
+  width: 70%;
+  font-size: 23px;
+  font-weight: bold;
+}
+.ad .slogan {
+  color: rgb(36, 36, 36);
+  width: 80%;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 3vh;
+}
+.ad button {
+  padding: 2vh;
+  border-radius: 5vh;
+  border: none;
+  background: rgb(147, 86, 220);
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  font-size: 17px;
+}
+
+.how {
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 3.5vh;
+}
+.how .fonctionnement {
+  font-size: 23px;
+  font-weight: bold;
+  align-self: baseline;
+}
+.how .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 4vw;
+       column-gap: 4vw;
+  width: 95%;
+  padding: 3vh 0 3vh 0;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.how .card .icon {
+  margin-left: 8vw;
+}
+.how .card p {
+  font-weight: bold;
+  font-size: 17px;
+}
+.how .card::before {
+  counter-increment: card;
+  content: counter(card);
+  position: absolute;
+  height: 8vw;
+  font-size: 16px;
+  font-weight: bold;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  transform: translateX(-4vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.how .card:hover {
+  background-color: rgba(146, 86, 220, 0.0901960784);
 }/*# sourceMappingURL=style.css.map */

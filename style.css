@@ -19,10 +19,9 @@ body {
 
 header {
   width: 100%;
-  flex-direction: column;
 }
 header .logo {
-  margin: 2.5vh 0 2.5vh 0;
+  margin: 2vh 0 2vh 0;
   width: 45%;
 }
 

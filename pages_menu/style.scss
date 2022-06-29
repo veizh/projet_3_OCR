@@ -42,6 +42,26 @@ header{
     z-index: -1;
 }
 
+@keyframes apparition {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/***************heart hover***************/
+form .title i:hover{
+font-weight:bold ;
+cursor: pointer;
+background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: opacity 1s ease-in-out;
+animation: apparition 1s ease-in-out forwards;
+}
+/****************************************/
+
 form{
     display: flex;
     flex-direction: column;
@@ -49,7 +69,7 @@ form{
     transform: translateY(-5.5vh);
     width: 100%;
     row-gap: 3.5vh;
-    border-radius: 40px;
+    border-radius: 40px 40px 0 0;
     padding: 5vh 5vw 5vh 5vw;
         .title{
             display: flex;
@@ -80,7 +100,92 @@ form{
                     height: 3px;
                 }
         }
+        .card{
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            width:100%;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3); 
+                box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3);
+                &:hover> .price{
+                    margin-right: 0px;
+                    transition: margin 1s ease;
+                }
+                &:hover>.price .check svg{
+                    transform: rotate(360deg);
+                    transition: transform 0.5s ease-in-out  0.1s;
+                }
+                .name{
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.6vh;
+                    white-space: nowrap;
+                    flex-grow: 1;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
 
-      
+                        h1,p{
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        h1{
+                            font-size: clamp(17px,2vw,23px);
+                        }
+                        p{
+                            font-size: clamp(15px,2vw,20px);
+                        }
+                }
+                .price{
+                    transition: margin 1s ease;
+                    margin-right: -18vw;
+                    display: flex;
+                        span{
+                            margin-right: 15px;
+                            margin-bottom: 15px;
+                            display: flex;
+                            align-self: flex-end;
+                            font-size: clamp(17px,2vw,20px);
+                        }
+                        .check{
+                            background-color: aquamarine;
+                            width: 18vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items:center;
+                                svg{
+                                    fill:white;
+                                    width: 30px;
+                                    aspect-ratio: 1/1;
+                                }
+                        }
+                }
+        }
+}
+footer{
+    width: 100%;
+    padding: 3vh 5vw 6.5vh 5vw; 
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    row-gap: 1.4vh;
+    color: white;
+    background-color: rgb(55, 55, 55);
+        img{
+            width: clamp(50px,30%,150px);
+            padding-bottom: 2.5vh;
+        }
+        
+        .row{
+            display: flex;
+            flex-direction: row;
+                .icon{
+                    width: 30px;
+                }
+        }
+  
 
 }

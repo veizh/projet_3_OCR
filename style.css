@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
-
 }
 
 .flex-center {
@@ -118,6 +117,9 @@ header .logo {
 .how .card:hover {
   background-color: rgba(146, 86, 220, 0.0901960784);
 }
+.how .card:hover > .icon {
+  color: #9356DC;
+}
 
 .restaurant {
   margin: auto;
@@ -182,6 +184,16 @@ header .logo {
   align-self: baseline;
   font-size: 35px;
 }
+.restaurant .card .legend .icon:hover {
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 1s ease-in-out;
+  -webkit-animation: apparition 1s ease-in-out forwards;
+          animation: apparition 1s ease-in-out forwards;
+}
 
 footer {
   width: 100%;
@@ -203,4 +215,22 @@ footer .row {
 }
 footer .row .icon {
   width: 30px;
+}
+
+/********************* KEYFRAMES ************************/
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;}
+    font-family: 'Roboto', sans-serif;
+}
 
 .flex-center{
     display: flex;
@@ -12,8 +13,7 @@
     align-items: center;
 }
 body{
-    
-                    counter-reset: card;
+     counter-reset: card;
 }
 
 header{
@@ -34,7 +34,7 @@ header{
                 p{
                     margin-left: 15px;
                 }
-        }
+}
 
 
 
@@ -120,6 +120,9 @@ header{
                 &:hover{
                     background-color: #9256dc17;
                 }
+                &:hover> .icon{
+                    color: #9356DC;
+                }
         }
 }   
 
@@ -132,7 +135,7 @@ header{
     padding-bottom: 5vh;
     flex-direction: column;
     row-gap: 3.5vh;
-    
+
         .entete{
             margin-left: 5vw;
             font-size: 23px;
@@ -146,6 +149,8 @@ header{
             overflow: hidden;
             -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3); 
             box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3);
+
+           
             .new{
                  position: absolute;
                  top: 2vh;
@@ -184,10 +189,21 @@ header{
                         margin-right: 3%;
                         align-self: baseline;
                         font-size: 35px;
+                        &:hover{
+                            
+                            font-weight:bold ;
+                            cursor: pointer;
+                            background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            transition: opacity 1s ease-in-out;
+                            animation: apparition 1s ease-in-out forwards;
+                        }
                     }
+                }
             }
-        }
 }
+
 
 footer{
     width: 100%;
@@ -212,4 +228,14 @@ footer{
         }
   
 
+}
+
+/********************* KEYFRAMES ************************/
+@keyframes apparition {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

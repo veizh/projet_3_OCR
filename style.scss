@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -196,7 +198,6 @@ header{
                             background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
-                            transition: opacity 1s ease-in-out;
                             animation: apparition 1s ease-in-out forwards;
                         }
                     }
@@ -226,14 +227,13 @@ footer{
                     width: 30px;
                 }
         }
-  
 
 }
 
 /********************* KEYFRAMES ************************/
 @keyframes apparition {
     from{
-        opacity: 0;
+        opacity: 0.5;
     }
     to{
         opacity: 1;

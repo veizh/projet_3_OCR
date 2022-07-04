@@ -190,7 +190,6 @@ header .logo {
   background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 1s ease-in-out;
   -webkit-animation: apparition 1s ease-in-out forwards;
           animation: apparition 1s ease-in-out forwards;
 }
@@ -220,7 +219,7 @@ footer .row .icon {
 /********************* KEYFRAMES ************************/
 @-webkit-keyframes apparition {
   from {
-    opacity: 0;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -228,7 +227,7 @@ footer .row .icon {
 }
 @keyframes apparition {
   from {
-    opacity: 0;
+    opacity: 0.5;
   }
   to {
     opacity: 1;

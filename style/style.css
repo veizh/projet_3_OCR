@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
+header {
+  width: 100%;
+}
+header .logo {
+  margin: 2vh 0 2vh 0;
+  width: min(45%, 300px);
 }
 
 .flex-center {
@@ -13,16 +13,38 @@
   align-items: center;
 }
 
-body {
-  counter-reset: card;
+footer {
+  width: 100%;
+  padding: 3vh 5vw 6.5vh 5vw;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  row-gap: 1.4vh;
+  color: white;
+  background-color: rgb(55, 55, 55);
+}
+footer img {
+  width: clamp(50px, 30%, 150px);
+  padding-bottom: 2.5vh;
+}
+footer .row {
+  display: flex;
+  flex-direction: row;
+}
+footer .row .icon {
+  width: 30px;
 }
 
-header {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
-header .logo {
-  margin: 2vh 0 2vh 0;
-  width: 45%;
+
+body {
+  counter-reset: card;
 }
 
 .location {
@@ -192,28 +214,6 @@ header .logo {
   -webkit-text-fill-color: transparent;
   -webkit-animation: apparition 1s ease-in-out forwards;
           animation: apparition 1s ease-in-out forwards;
-}
-
-footer {
-  width: 100%;
-  padding: 3vh 5vw 6.5vh 5vw;
-  display: flex;
-  font-size: 20px;
-  flex-direction: column;
-  row-gap: 1.4vh;
-  color: white;
-  background-color: rgb(55, 55, 55);
-}
-footer img {
-  width: clamp(50px, 30%, 150px);
-  padding-bottom: 2.5vh;
-}
-footer .row {
-  display: flex;
-  flex-direction: row;
-}
-footer .row .icon {
-  width: 30px;
 }
 
 /********************* KEYFRAMES ************************/

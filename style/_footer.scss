@@ -1,0 +1,23 @@
+footer{
+    width: 100%;
+    padding: 3vh 5vw 6.5vh 5vw; 
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    row-gap: 1.4vh;
+    color: white;
+    background-color: rgb(55, 55, 55);
+        img{
+            width: clamp(50px,30%,150px);
+            padding-bottom: 2.5vh;
+        }
+        
+        .row{
+            display: flex;
+            flex-direction: row;
+                .icon{
+                    width: 30px;
+                }
+        }
+
+}

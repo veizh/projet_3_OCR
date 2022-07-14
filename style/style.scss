@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import "_header.scss";
+@import "_footer.scss";
 
 *{
     margin: 0;
@@ -9,22 +10,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 body{
      counter-reset: card;
 }
 
-header{
-    width: 100%;
-                .logo{
-                    margin:2vh 0 2vh 0;
-                    width: 45%;
-        } 
-} 
 
 
 .location{
@@ -206,29 +196,7 @@ header{
 }
 
 
-footer{
-    width: 100%;
-    padding: 3vh 5vw 6.5vh 5vw; 
-    display: flex;
-    font-size: 20px;
-    flex-direction: column;
-    row-gap: 1.4vh;
-    color: white;
-    background-color: rgb(55, 55, 55);
-        img{
-            width: clamp(50px,30%,150px);
-            padding-bottom: 2.5vh;
-        }
-        
-        .row{
-            display: flex;
-            flex-direction: row;
-                .icon{
-                    width: 30px;
-                }
-        }
 
-}
 
 /********************* KEYFRAMES ************************/
 @keyframes apparition {

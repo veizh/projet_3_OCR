@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Shrikhand&display=swap");
+header {
+  width: 100%;
+}
+header .logo {
+  margin: 2vh 0 2vh 0;
+  width: min(45%, 300px);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+  padding: 3vh 5vw 6.5vh 5vw;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  row-gap: 1.4vh;
+  color: white;
+  background-color: rgb(55, 55, 55);
+}
+footer img {
+  width: clamp(50px, 30%, 150px);
+  padding-bottom: 2.5vh;
+}
+footer .row {
+  display: flex;
+  flex-direction: row;
+}
+footer .row .icon {
+  width: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.back {
+  font-size: max(4.5vw, 20px);
+  position: absolute;
+  left: 5vw;
+  color: black;
+  text-decoration: none;
+}
+
+.background {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/***************heart hover***************/
+form .title i:hover {
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 1s ease-in-out;
+  -webkit-animation: apparition 1s ease-in-out forwards;
+          animation: apparition 1s ease-in-out forwards;
+}
+
+/****************************************/
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 241, 241);
+  transform: translateY(-5.5vh);
+  width: 100%;
+  row-gap: 3.5vh;
+  border-radius: 40px 40px 0 0;
+  padding: 5vh 5vw 5vh 5vw;
+}
+form .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+form .title i {
+  font-size: 35px;
+}
+form .title p {
+  font-size: 26px;
+  font-style: italic;
+  font-family: "Shrikhand", cursive;
+}
+form .subtitle {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+}
+form .subtitle p {
+  font-size: 20px;
+  margin-bottom: 0.3vh;
+}
+form .subtitle .border {
+  width: 14%;
+  background-color: #99E2D0;
+  height: 3px;
+}
+form .card {
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
+form .card:hover > .price {
+  margin-right: 0px;
+  transition: margin 1s ease;
+}
+form .card:hover > .price .check svg {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out 0.1s;
+}
+form .card .name {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6vh;
+  white-space: nowrap;
+  flex-grow: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+form .card .name h1, form .card .name p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+form .card .name h1 {
+  font-size: clamp(17px, 2vw, 23px);
+}
+form .card .name p {
+  font-size: clamp(15px, 2vw, 20px);
+}
+form .card .price {
+  transition: margin 1s ease;
+  margin-right: -18vw;
+  display: flex;
+}
+form .card .price span {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-self: flex-end;
+  font-size: clamp(17px, 2vw, 20px);
+}
+form .card .price .check {
+  background-color: aquamarine;
+  width: 18vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .card .price .check svg {
+  fill: white;
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
+footer {
+  margin-top: -50px;
+}
+
+/********************* KEYFRAMES ************************/
+@keyframes apparition {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rota {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rota {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes entry {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes entry {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/********************* boucle for ************************/
+.card-1 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 0.15s;
+          animation: entry 0.5s ease-in-out forwards 0.15s;
+}
+
+.card-2 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 0.3s;
+          animation: entry 0.5s ease-in-out forwards 0.3s;
+}
+
+.card-3 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 0.45s;
+          animation: entry 0.5s ease-in-out forwards 0.45s;
+}
+
+.card-4 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 0.6s;
+          animation: entry 0.5s ease-in-out forwards 0.6s;
+}
+
+.card-5 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 0.75s;
+          animation: entry 0.5s ease-in-out forwards 0.75s;
+}
+
+.card-6 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 0.9s;
+          animation: entry 0.5s ease-in-out forwards 0.9s;
+}
+
+.card-7 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 1.05s;
+          animation: entry 0.5s ease-in-out forwards 1.05s;
+}
+
+.card-8 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 1.2s;
+          animation: entry 0.5s ease-in-out forwards 1.2s;
+}
+
+.card-9 {
+  -webkit-animation: entry 0.5s ease-in-out forwards 1.35s;
+          animation: entry 0.5s ease-in-out forwards 1.35s;
+}
+
+/********************* animation spinner ************************/
+.spinner-parent {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 5;
+  opacity: 0;
+}
+
+.spinner {
+  position: fixed;
+  z-index: 6;
+  width: 20vw;
+  aspect-ratio: 1/1;
+  background: url("../image/spinner-solid.svg") center no-repeat;
+  -webkit-animation: rota 1.5s ease-in-out infinite;
+          animation: rota 1.5s ease-in-out infinite;
+}/*# sourceMappingURL=style_page_menu.css.map */

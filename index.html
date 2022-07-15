@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/_indexResponsive.css">
     <script src="https://kit.fontawesome.com/2974b48fce.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="flex-center">
             <img src="image/ohmyfood.png" class="logo"  alt="logo_ohmyfood">
     </header>
-        <div class="location flex-center">
+
+    <main class="flex-center">
+    <div class="location flex-center">
             <i class="fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
         </div>
@@ -20,7 +23,7 @@
         <section class="ad flex-center">
             <p class="accroche">Réservez le menu qui vous convient</p>
             <p class="slogan">Découvrez des réstaurants d'exceptions, séléctionnés par nos soins.</p>
-            <button> Explorer nos restaurants</button>
+            <a href="#restaurants"> Explorer nos restaurants</a>
         </section>
         <section class="how flex-center">
             <p class="fonctionnement">Fonctionnement</p>
@@ -37,7 +40,7 @@
                 <p>Dégustez au restaurant</p>
             </div>
         </section>
-        <section class="restaurant flex-center">
+        <section id ="restaurants" class="restaurant flex-center">
             <p class="entete">Restaurants</p>
             <div class="card">
                 <div class="new">Nouveau</div>
@@ -86,6 +89,9 @@
             </div>
         </section>
 
+
+    </main>
+    
         <footer>
             <img src="image/ohmyfood_white.png" alt="logo_ohmyfood">
             <div class="row" ><i class="fa-solid fa-utensils icon"></i><p>Proposer un restaurant</p></div>

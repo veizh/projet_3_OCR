@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "_header.scss";
 @import "_footer.scss";
-
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +14,9 @@ body{
      counter-reset: card;
 }
 
-
+main{
+    flex-direction: column;
+}
 
 .location{
             -webkit-box-shadow: inset 0px 5px 5px 0px rgba(53, 53, 53, 0.25); 
@@ -50,7 +51,8 @@ body{
             font-size: 17px;
             margin-bottom: 3vh;
         }
-        button{
+        a{
+            text-decoration: none;
             padding: 2vh;
             border-radius: 5vh;
             border: none;

@@ -47,6 +47,10 @@ body {
   counter-reset: card;
 }
 
+main {
+  flex-direction: column;
+}
+
 .location {
   box-shadow: inset 0px 5px 5px 0px rgba(53, 53, 53, 0.25);
   background-color: rgb(240, 240, 240);
@@ -78,7 +82,8 @@ body {
   font-size: 17px;
   margin-bottom: 3vh;
 }
-.ad button {
+.ad a {
+  text-decoration: none;
   padding: 2vh;
   border-radius: 5vh;
   border: none;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Shrikhand&display=swap');
 @import '_header.scss' ;
 @import '_footer.scss';
-
+@import "../style/mixins/responsive.scss";
 
 *{
     margin: 0;
@@ -12,19 +12,25 @@
 
 
 .back{
-    font-size: max(4.5vw,20px);
+    font-size: max(3vw,20px);
     position: absolute;
-    left: 5vw;
+    left: 3.5vw;
     color: black;
     text-decoration: none;
+        @include desktop{
+            left: 10vw;
+        }
 
 }
 
 .background{
-
+    
     object-fit: cover;
     width: 100%;
     z-index: -1;
+        @include desktop{
+            height:50vh ;  
+        }
 }
 
 @keyframes apparition {
@@ -58,11 +64,22 @@ form{
     row-gap: 3.5vh;
     border-radius: 40px 40px 0 0;
     padding: 5vh 5vw 5vh 5vw;
+        @include desktop{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 5vh 10vw;
+            row-gap: 2vh;
+        }
         .title{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            @include desktop{
+                width: 100%;
+                font-size: 30px;
+            }
                 i{
                     font-size: 35px;
                 }
@@ -70,6 +87,7 @@ form{
                     font-size: 26px;
                     font-style: italic;
                     font-family: 'Shrikhand', cursive;
+                   
                 }
         } 
 
@@ -77,14 +95,24 @@ form{
             margin-top: 3vh;
             display: flex;
             flex-direction: column;
+            @include desktop{
+                width: 100%;
+                font-size: 30px;
+            }
                 p{
                     font-size: 20px;
                     margin-bottom: 0.3vh;
+                    @include desktop{
+                        font-size: 26px;
+                    }
                 }
                 .border{
-                    width: 14%;
+                    width: 40px;
                     background-color: #99E2D0;
                     height: 3px;
+                    @include desktop{
+                        width:65px;
+                    }
                 }
         }
         .card{
@@ -96,6 +124,9 @@ form{
             border-radius: 20px;
             -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3); 
                 box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3);
+                @include desktop{
+                    width: 31%;
+                }
                 &:hover> .price{
                     margin-right: 0px;
                     transition: margin 1s ease;
@@ -131,6 +162,9 @@ form{
                     transition: margin 1s ease;
                     margin-right: -18vw;
                     display: flex;
+                    @include desktop{
+                        margin-right: -70px;
+                    }
                         span{
                             margin-right: 15px;
                             margin-bottom: 15px;
@@ -144,6 +178,9 @@ form{
                             display: flex;
                             justify-content: center;
                             align-items:center;
+                            @include desktop{
+                                width: 70px;
+                            }
                                 svg{
                                     fill:white;
                                     width: 30px;
@@ -155,6 +192,9 @@ form{
 }
 footer{
     margin-top: -50px;
+    @include desktop{
+        padding: 3vh 10vw 6.5vh 10vw;
+    }
 }
 
 /********************* KEYFRAMES ************************/
@@ -166,14 +206,7 @@ footer{
         opacity: 1;
     }
 }
-@keyframes rota{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
+
 @keyframes entry{
     from{
         transform: translateY(-40px);
@@ -192,23 +225,3 @@ footer{
     }
 }
 
-/********************* animation spinner ************************/
-
-
-
-.spinner-parent{
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    position: fixed;
-    z-index: 5;
-    opacity: 0;
-}
-.spinner{
-    position: fixed;
-    z-index: 6;
-    width: 20vw;
-    aspect-ratio: 1/1;
-    background:url('../image/spinner-solid.svg') center no-repeat;
-    animation: rota 1.5s ease-in-out infinite;
-}

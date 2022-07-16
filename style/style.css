@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 header {
   width: 100%;
+  box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.26);
 }
 header .logo {
   margin: 2vh 0 2vh 0;
@@ -43,6 +44,71 @@ footer .row .icon {
   font-family: "Roboto", sans-serif;
 }
 
+@-webkit-keyframes rota {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rota {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    top: -100vh;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    top: -100vh;
+  }
+}
+.spinner-parent {
+  -webkit-animation: fade-out 1s ease-out 1.5s;
+          animation: fade-out 1s ease-out 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  opacity: 1;
+}
+
+.spinner {
+  position: fixed;
+  z-index: 6;
+  width: 20vw;
+  aspect-ratio: 1/1;
+  background: url("../image/spinner-solid.svg") center no-repeat;
+  -webkit-animation: rota 1.5s ease-in-out infinite;
+          animation: rota 1.5s ease-in-out infinite;
+}
+
 body {
   counter-reset: card;
 }
@@ -57,6 +123,11 @@ main {
   width: 100%;
   padding: 2vh 0 2vh 0;
 }
+@media (min-width: 992px) {
+  .location {
+    margin-bottom: 3vh;
+  }
+}
 .location p {
   margin-left: 15px;
 }
@@ -69,11 +140,25 @@ main {
   flex-direction: column;
   justify-content: space-around;
 }
+@media (min-width: 992px) {
+  .ad {
+    border-right: 2px solid rgb(55, 55, 55);
+    width: 40%;
+    justify-content: space-between;
+    padding: 0;
+    height: 40vh;
+  }
+}
 .ad .accroche {
   text-align: center;
   width: 70%;
   font-size: 23px;
   font-weight: bold;
+}
+@media (min-width: 992px) {
+  .ad .accroche {
+    font-size: 25px;
+  }
 }
 .ad .slogan {
   color: rgb(36, 36, 36);
@@ -81,6 +166,12 @@ main {
   text-align: center;
   font-size: 17px;
   margin-bottom: 3vh;
+}
+@media (min-width: 992px) {
+  .ad .slogan {
+    margin: 0;
+    font-size: 23px;
+  }
 }
 .ad a {
   text-decoration: none;
@@ -102,10 +193,41 @@ main {
   align-items: flex-end;
   row-gap: 3.5vh;
 }
+@media (min-width: 768px) {
+  .how {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 4vw;
+         column-gap: 4vw;
+  }
+}
+@media (min-width: 992px) {
+  .how {
+    margin: 0;
+    height: 40vh;
+    row-gap: 0;
+    justify-content: space-between;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .how .fonctionnement {
   font-size: 23px;
   font-weight: bold;
   align-self: baseline;
+}
+@media (min-width: 768px) {
+  .how .fonctionnement {
+    width: 100%;
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .how .fonctionnement {
+    width: 100%;
+    text-align: center;
+  }
 }
 .how .card {
   display: flex;
@@ -118,12 +240,48 @@ main {
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
 }
+@media (min-width: 768px) {
+  .how .card {
+    width: min(30%, 300px);
+    padding: 3vh 0;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 992px) {
+  .how .card {
+    width: min(80%, 500px);
+  }
+}
 .how .card .icon {
   margin-left: 8vw;
+}
+@media (min-width: 768px) {
+  .how .card .icon {
+    margin-left: 35px;
+    margin-right: -2.5vw;
+  }
+}
+@media (min-width: 992px) {
+  .how .card .icon {
+    margin-left: 35px;
+    margin-right: -2.5vw;
+  }
 }
 .how .card p {
   font-weight: bold;
   font-size: 17px;
+}
+@media (min-width: 768px) {
+  .how .card p {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .how .card p {
+    font-size: 18px;
+  }
 }
 .how .card::before {
   counter-increment: card;
@@ -158,11 +316,41 @@ main {
   flex-direction: column;
   row-gap: 3.5vh;
 }
+@media (min-width: 768px) {
+  .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 6vw;
+    -moz-column-gap: 4vh;
+         column-gap: 4vh;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant {
+    row-gap: 4vh;
+    width: 100%;
+    padding: 5vh 10vw;
+  }
+}
 .restaurant .entete {
   margin-left: 5vw;
   font-size: 23px;
   font-weight: bold;
   align-self: baseline;
+}
+@media (min-width: 768px) {
+  .restaurant .entete {
+    width: 100%;
+    font-size: 25px;
+    margin-left: 5vw;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant .entete {
+    margin: 0;
+    font-size: 33px;
+    text-align: center;
+  }
 }
 .restaurant .card {
   position: relative;
@@ -170,6 +358,11 @@ main {
   border-radius: 15px 15px 15px 15px;
   overflow: hidden;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 768px) {
+  .restaurant .card {
+    width: clamp(300px, 35vw, 500px);
+  }
 }
 .restaurant .card .new {
   position: absolute;
@@ -219,6 +412,20 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-animation: apparition 1s ease-in-out forwards;
           animation: apparition 1s ease-in-out forwards;
+}
+
+@media (min-width: 992px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    padding: 5vh 10vw;
+    align-items: center;
+  }
 }
 
 /********************* KEYFRAMES ************************/

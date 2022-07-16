@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "_header.scss";
 @import "_footer.scss";
+@import "../style/mixins/responsive.scss";
 *{
     margin: 0;
     padding: 0;
@@ -8,8 +9,45 @@
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
-
-
+@keyframes rota{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+        top: 0;
+    }
+    to{
+        top:-100vh;
+    }
+}
+.spinner-parent{
+    animation: fade-out 1s ease-out 1.5s;
+    animation-fill-mode: forwards;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    opacity: 1;
+}
+.spinner{
+    position: fixed;
+    z-index: 6;
+    width: 20vw;
+    aspect-ratio: 1/1;
+    background:url('../image/spinner-solid.svg') center no-repeat;
+    animation: rota 1.5s ease-in-out infinite;
+}
 body{
      counter-reset: card;
 }
@@ -24,6 +62,9 @@ main{
             background-color: rgb(240, 240, 240);
             width: 100%;
             padding:2vh 0 2vh 0;
+            @include desktop{
+                margin-bottom: 3vh;
+            }
                 p{
                     margin-left: 15px;
                 }
@@ -38,11 +79,21 @@ main{
     height: 35vh;
     flex-direction: column;
     justify-content: space-around;
+    @include desktop{
+        border-right: 2px solid rgb(55, 55, 55);
+        width: 40%;
+        justify-content: space-between;
+        padding: 0;
+        height: 40vh;
+    }
         .accroche{
             text-align: center;
             width: 70%;
             font-size: 23px;
             font-weight: bold;
+            @include desktop{
+                font-size: 25px;
+            }
         }
         .slogan{
             color: rgb(36, 36, 36);
@@ -50,6 +101,10 @@ main{
             text-align: center;
             font-size: 17px;
             margin-bottom: 3vh;
+            @include desktop{
+                margin: 0;
+                font-size: 23px;
+            }
         }
         a{
             text-decoration: none;
@@ -73,10 +128,32 @@ main{
     flex-direction: column;
     align-items: flex-end;
     row-gap:3.5vh;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 4vw;
+        }
+        @include desktop{
+            margin: 0;
+            height: 40vh;
+            row-gap: 0;
+            justify-content: space-between;
+            width: 40%;
+            flex-direction: column;
+            align-items: center;
+        }
         .fonctionnement{
             font-size: 23px;
             font-weight: bold;
             align-self: baseline;
+                @include tablet{
+                    width: 100%;
+                font-size: 25px;
+                }
+                @include desktop{
+                    width: 100%;
+                    text-align: center;
+                }
         }
         .card{
             display: flex;
@@ -88,12 +165,36 @@ main{
             -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3); 
             box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3);
             border-radius: 20px;
+                @include tablet{
+                    width: min(30%,300px);
+                padding: 3vh 0;
+                white-space: nowrap;
+                }
+                @include desktop{
+                    width: min(80%,500px);
+                }
                 .icon{
                     margin-left: 8vw;
+                        @include tablet{
+                            margin-left: 35px;
+                            margin-right: -2.5vw;
+                        }
+                        @include desktop{
+                            margin-left: 35px;
+                        margin-right: -2.5vw;
+                        }
                 }
                 p{
                     font-weight: bold;
                     font-size: 17px;
+                        @include tablet{
+                            font-size: 14px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        @include desktop {
+                            font-size: 18px;
+                        }
                 }
                 &::before{
                     counter-increment: card;
@@ -129,12 +230,33 @@ main{
     padding-bottom: 5vh;
     flex-direction: column;
     row-gap: 3.5vh;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 6vw;
+            column-gap: 4vh;
+        }
+        @include desktop{
+            row-gap: 4vh;
+            width: 100%;
+            padding: 5vh 10vw;
+        }
 
         .entete{
             margin-left: 5vw;
             font-size: 23px;
             font-weight: bold;
             align-self: baseline;
+                @include tablet{
+                    width: 100%;
+                    font-size: 25px;
+                    margin-left:5vw;
+                }
+                @include desktop{
+                    margin: 0;
+                    font-size: 33px;
+                    text-align: center;
+                }
         }
         .card{
             position: relative;
@@ -143,6 +265,9 @@ main{
             overflow: hidden;
             -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3); 
             box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.3);
+                @include tablet{
+                    width: clamp(300px,35vw,500px);
+                }
 
            
             .new{
@@ -197,8 +322,18 @@ main{
             }
 }
 
-
-
+main{
+    @include desktop{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+footer{
+    @include desktop{
+        padding: 5vh 10vw;
+        align-items: center;
+    }
+}
 
 /********************* KEYFRAMES ************************/
 @keyframes apparition {

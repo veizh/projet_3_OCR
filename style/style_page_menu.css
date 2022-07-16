@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Shrikhand&display=swap");
 header {
   width: 100%;
+  box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.26);
 }
 header .logo {
   margin: 2vh 0 2vh 0;
@@ -44,11 +45,16 @@ footer .row .icon {
 }
 
 .back {
-  font-size: max(4.5vw, 20px);
+  font-size: max(3vw, 20px);
   position: absolute;
-  left: 5vw;
+  left: 3.5vw;
   color: black;
   text-decoration: none;
+}
+@media (min-width: 992px) {
+  .back {
+    left: 10vw;
+  }
 }
 
 .background {
@@ -56,6 +62,11 @@ footer .row .icon {
      object-fit: cover;
   width: 100%;
   z-index: -1;
+}
+@media (min-width: 992px) {
+  .background {
+    height: 50vh;
+  }
 }
 
 @-webkit-keyframes apparition {
@@ -98,11 +109,26 @@ form {
   border-radius: 40px 40px 0 0;
   padding: 5vh 5vw 5vh 5vw;
 }
+@media (min-width: 992px) {
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+    row-gap: 2vh;
+  }
+}
 form .title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 992px) {
+  form .title {
+    width: 100%;
+    font-size: 30px;
+  }
 }
 form .title i {
   font-size: 35px;
@@ -117,14 +143,30 @@ form .subtitle {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 992px) {
+  form .subtitle {
+    width: 100%;
+    font-size: 30px;
+  }
+}
 form .subtitle p {
   font-size: 20px;
   margin-bottom: 0.3vh;
 }
+@media (min-width: 992px) {
+  form .subtitle p {
+    font-size: 26px;
+  }
+}
 form .subtitle .border {
-  width: 14%;
+  width: 40px;
   background-color: #99E2D0;
   height: 3px;
+}
+@media (min-width: 992px) {
+  form .subtitle .border {
+    width: 65px;
+  }
 }
 form .card {
   opacity: 0;
@@ -134,6 +176,11 @@ form .card {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 992px) {
+  form .card {
+    width: 31%;
+  }
 }
 form .card:hover > .price {
   margin-right: 0px;
@@ -170,6 +217,11 @@ form .card .price {
   margin-right: -18vw;
   display: flex;
 }
+@media (min-width: 992px) {
+  form .card .price {
+    margin-right: -70px;
+  }
+}
 form .card .price span {
   margin-right: 15px;
   margin-bottom: 15px;
@@ -184,6 +236,11 @@ form .card .price .check {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 992px) {
+  form .card .price .check {
+    width: 70px;
+  }
+}
 form .card .price .check svg {
   fill: white;
   width: 30px;
@@ -193,6 +250,11 @@ form .card .price .check svg {
 footer {
   margin-top: -50px;
 }
+@media (min-width: 992px) {
+  footer {
+    padding: 3vh 10vw 6.5vh 10vw;
+  }
+}
 
 /********************* KEYFRAMES ************************/
 @keyframes apparition {
@@ -201,22 +263,6 @@ footer {
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes rota {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rota {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes entry {
@@ -283,24 +329,4 @@ footer {
 .card-9 {
   -webkit-animation: entry 0.5s ease-in-out forwards 1.35s;
           animation: entry 0.5s ease-in-out forwards 1.35s;
-}
-
-/********************* animation spinner ************************/
-.spinner-parent {
-  width: 100vw;
-  height: 100vh;
-  background-color: #ffffff;
-  position: fixed;
-  z-index: 5;
-  opacity: 0;
-}
-
-.spinner {
-  position: fixed;
-  z-index: 6;
-  width: 20vw;
-  aspect-ratio: 1/1;
-  background: url("../image/spinner-solid.svg") center no-repeat;
-  -webkit-animation: rota 1.5s ease-in-out infinite;
-          animation: rota 1.5s ease-in-out infinite;
 }/*# sourceMappingURL=style_page_menu.css.map */

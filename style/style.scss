@@ -29,6 +29,11 @@
         top:-100vh;
     }
 }
+a{
+    color: black;
+    text-decoration: none;
+    
+}
 .spinner-parent{
     animation: fade-out 1s ease-out 1.5s;
     animation-fill-mode: forwards;

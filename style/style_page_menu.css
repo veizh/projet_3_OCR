@@ -24,6 +24,9 @@ footer {
   color: white;
   background-color: rgb(55, 55, 55);
 }
+footer P {
+  cursor: pointer;
+}
 footer img {
   width: clamp(50px, 30%, 150px);
   padding-bottom: 2.5vh;

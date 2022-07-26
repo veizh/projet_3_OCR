@@ -7,6 +7,9 @@ footer{
     row-gap: 1.4vh;
     color: white;
     background-color: rgb(55, 55, 55);
+        P{
+            cursor: pointer;
+        }
         img{
             width: clamp(50px,30%,150px);
             padding-bottom: 2.5vh;

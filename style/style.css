@@ -192,6 +192,10 @@ main {
   background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   font-size: 17px;
 }
+.ad a:hover {
+  background: linear-gradient(355deg, rgb(149, 94, 216) 0%, rgb(209, 120, 184) 100%);
+  box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.39);
+}
 
 .how {
   margin: auto;

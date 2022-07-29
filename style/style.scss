@@ -121,6 +121,11 @@ main{
             cursor: pointer;
             background: linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
             font-size: 17px;
+                &:hover{
+                     background: linear-gradient(355deg, rgb(149, 94, 216) 0%, rgb(209, 120, 184) 100%);
+                     -webkit-box-shadow: 2px 4px 9px 1px rgba(0,0,0,0.39); 
+box-shadow: 2px 4px 9px 1px rgba(0,0,0,0.39);
+                }
         }
 }
 

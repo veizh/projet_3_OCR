@@ -172,6 +172,7 @@ form .subtitle .border {
   }
 }
 form .card {
+  cursor: pointer;
   opacity: 0;
   display: flex;
   justify-content: space-between;
@@ -270,7 +271,7 @@ footer {
 }
 @-webkit-keyframes entry {
   from {
-    transform: translateY(-40px);
+    transform: translateY(40px);
     opacity: 0;
   }
   to {
@@ -280,7 +281,7 @@ footer {
 }
 @keyframes entry {
   from {
-    transform: translateY(-40px);
+    transform: translateY(40px);
     opacity: 0;
   }
   to {

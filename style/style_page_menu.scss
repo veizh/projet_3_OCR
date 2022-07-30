@@ -71,6 +71,28 @@ form{
             padding: 5vh 10vw;
             row-gap: 2vh;
         }
+        a{
+            text-decoration: none;
+            padding: 2vh;
+            border-radius: 5vh;
+            border: none;
+            background: rgb(147,86,220);
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+            font-size: 17px;
+            width: 150px;
+            text-align: center;
+            align-self: center;
+            @include desktop{
+                margin-top: 30px;
+            }
+                &:hover{
+                     background: linear-gradient(355deg, rgb(189, 131, 255) 0%,rgb(255, 159, 228) 100%);
+                     -webkit-box-shadow: 2px 4px 6px 1px rgba(0,0,0,0.39); 
+box-shadow: 2px 4px 6px 1px rgba(0,0,0,0.39);
+                }
+        }
         .title{
             display: flex;
             flex-direction: row;

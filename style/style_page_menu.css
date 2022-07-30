@@ -121,6 +121,29 @@ form {
     row-gap: 2vh;
   }
 }
+form a {
+  text-decoration: none;
+  padding: 2vh;
+  border-radius: 5vh;
+  border: none;
+  background: rgb(147, 86, 220);
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  font-size: 17px;
+  width: 150px;
+  text-align: center;
+  align-self: center;
+}
+@media (min-width: 992px) {
+  form a {
+    margin-top: 30px;
+  }
+}
+form a:hover {
+  background: linear-gradient(355deg, rgb(189, 131, 255) 0%, rgb(255, 159, 228) 100%);
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.39);
+}
 form .title {
   display: flex;
   flex-direction: row;
